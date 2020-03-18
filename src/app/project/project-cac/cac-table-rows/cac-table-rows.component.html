@@ -1,4 +1,4 @@
-<tr (click)="selectItem(item);stopPropagation();" *ngFor="let item of items">
+<tr (click)="selectItem(item)" *ngFor="let item of items">
   <td data-label="Select" scope="row" class="col-1">
     <input type="checkbox" aria-label="Checkbox for row item" [(ngModel)]='item.checkbox'>
   </td>
@@ -9,7 +9,7 @@
       data-toggle="tooltip" data-placement="bottom" title="{{item.liveNear}}"
       class="col-1">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.liveNear !== '', 'bg-danger': item.liveNear === ''}">{{item.liveNear !== ''}}
+           [ngClass]="{'bg-success': item.liveNear !== '', 'bg-danger': item.liveNear === ''}">{{(item.liveNear !== '') ? 'Yes' : 'No'}}
       </div>
   </td>
   <td data-label="KnowledgeOf"
@@ -17,7 +17,7 @@
       data-toggle="tooltip" data-placement="bottom" title="{{item.memberOf}}"
       class="col-1">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.memberOf !== '', 'bg-danger': item.memberOf === ''}">{{item.memberOf !== ''}}
+           [ngClass]="{'bg-success': item.memberOf !== '', 'bg-danger': item.memberOf === ''}">{{(item.memberOf !== '') ? 'Yes' : 'No'}}
       </div>
   </td>
   <td data-label="MemberOf"
@@ -25,7 +25,7 @@
       data-toggle="tooltip" data-placement="bottom" title="{{item.knowledgeOf}}"
       class="col-1">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.knowledgeOf !== '', 'bg-danger': item.knowledgeOf === ''}">{{item.knowledgeOf !== ''}}
+           [ngClass]="{'bg-success': item.knowledgeOf !== '', 'bg-danger': item.knowledgeOf === ''}">{{(item.knowledgeOf !== '') ? 'Yes' : 'No'}}
       </div>
   </td>
   <td data-label="MemberOf"
@@ -33,7 +33,7 @@
       data-toggle="tooltip" data-placement="bottom" title="{{item.additionalNotes}}"
       class="col-4">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.additionalNotes !== '', 'bg-danger': item.additionalNotes === ''}">{{item.additionalNotes !== ''}}
+           [ngClass]="{'bg-success': item.additionalNotes !== '', 'bg-danger': item.additionalNotes === ''}">{{(item.additionalNotes !== '') ? 'Yes' : 'No'}}
       </div>
   </td>
 </tr>
