@@ -6,26 +6,26 @@
   <td data-label="Email" scope="row" class="col-2">{{item.email}}</td>
   <td data-label="Live Near"
       scope="row"
-      data-toggle="tooltip" data-placement="bottom" title="{{item.liveNear}}"
+      data-toggle="tooltip" data-placement="bottom" title="{{item.liveNearInput}}"
       class="col-1">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.liveNear !== '', 'bg-danger': item.liveNear === ''}">{{(item.liveNear !== '') ? 'Yes' : 'No'}}
+           [ngClass]="{'bg-success': item.liveNear === true, 'bg-danger': item.liveNear === false}">{{item.liveNear === true ? 'Yes' : 'No'}}
       </div>
   </td>
   <td data-label="KnowledgeOf"
       scope="row"
-      data-toggle="tooltip" data-placement="bottom" title="{{item.memberOf}}"
+      data-toggle="tooltip" data-placement="bottom" title="{{item.memberOfInput}}"
       class="col-1">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.memberOf !== '', 'bg-danger': item.memberOf === ''}">{{(item.memberOf !== '') ? 'Yes' : 'No'}}
+           [ngClass]="{'bg-success': item.memberOf === true, 'bg-danger': item.memberOf === false}">{{item.memberOf === true ? 'Yes' : 'No'}}
       </div>
   </td>
   <td data-label="MemberOf"
       scope="row"
-      data-toggle="tooltip" data-placement="bottom" title="{{item.knowledgeOf}}"
+      data-toggle="tooltip" data-placement="bottom" title="{{item.knowledgeOfInput}}"
       class="col-1">
       <div class="badge badge-pill badge-info"
-           [ngClass]="{'bg-success': item.knowledgeOf !== '', 'bg-danger': item.knowledgeOf === ''}">{{(item.knowledgeOf !== '') ? 'Yes' : 'No'}}
+           [ngClass]="{'bg-success': item.knowledgeOf === true, 'bg-danger': item.knowledgeOf === false}">{{item.knowledgeOf === true ? 'Yes' : 'No'}}
       </div>
   </td>
   <td data-label="MemberOf"
